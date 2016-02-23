@@ -1,0 +1,16 @@
+create tablespace aula
+datafile ’/u01/app/oracle/oradata/XE/aula.dbf ’ size 10 M
+autoextend on next 10 M
+extent management local;
+
+create user alunob
+identified by oradba
+default tablespace aula
+quota unlimited on aula;
+
+--para o usuario logar e abrir uma sessão
+GRANT CREATE SESSION TO alunob;
+
+GRANT create session, alter session, create table, create procedure, create view, 
+create materialized view, create trigger, create sequence, create any directory, 
+create type, create synonym TO alunob;
