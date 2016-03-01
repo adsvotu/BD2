@@ -32,6 +32,17 @@ CREATE TABLE Empregado (
   EmpComicao NUMBER(10,2)
 );
 
+/*
+ Restricoes de Integridate:
+  NOT NULL
+  CONSTRAINT pk_cliente (para nomear restricoes)
+*/
+
+/*
+  -uma tabela nao pode ter 2 chaves primarias apenas uma, mas ela pode ser composta
+  
+  CONSTRAINT fk_pedido_cliente FOREIGN KEY (codigo_cliente) REFERENCES cliente
+*/
 
 
 
